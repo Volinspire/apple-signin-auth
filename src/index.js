@@ -65,7 +65,7 @@ const getAuthorizationUrl = (
   const url = new URL(ENDPOINT_URL);
   url.pathname = '/auth/authorize';
 
-  url.searchParams.append('response_type', 'code');
+  url.searchParams.append('response_type', 'code id_token');
   url.searchParams.append('state', options.state || 'state');
   url.searchParams.append('client_id', options.clientID);
   url.searchParams.append('redirect_uri', options.redirectUri);
